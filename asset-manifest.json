@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/numberBaseball/static/js/main.a8a977b5.chunk.js",
+    "main.js.map": "/numberBaseball/static/js/main.a8a977b5.chunk.js.map",
+    "runtime-main.js": "/numberBaseball/static/js/runtime-main.abfe21e6.js",
+    "runtime-main.js.map": "/numberBaseball/static/js/runtime-main.abfe21e6.js.map",
+    "index.html": "/numberBaseball/index.html"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.abfe21e6.js",
+    "static/js/main.a8a977b5.chunk.js"
+  ]
+}
