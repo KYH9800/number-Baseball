@@ -149,6 +149,7 @@ const onStartButtonUser02 = () => {
                 if (user01CardArr[i] === user02CardArr[j]) {
                     if (i === j) {
                         strike++;
+                        ball--;
                         $strike.textContent = strike;
                         console.log('strike: ', strike)
                     } else {
