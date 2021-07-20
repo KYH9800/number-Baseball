@@ -41,7 +41,7 @@ let $user02DeleteButton = document.querySelector('#delete-user02');
 let $ball = document.querySelector('#ball');
 let $strike = document.querySelector('#strike');
 let $count = document.querySelector('#count');
-// let $win = document.querySelector('.hint-input');
+let $out = document.querySelector('#out');
 
 // 변수
 let user01CardArr = []; // user01의 Card
@@ -146,10 +146,10 @@ const onStartButtonUser02 = () => {
     if (clicked) {
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
+                //TODO: 스트라이크와 볼이 겹칠때는 중복을 제거해준다 (How..??)
                 if (user01CardArr[i] === user02CardArr[j]) {
                     if (i === j) {
                         strike++;
-                        ball--;
                         $strike.textContent = strike;
                         console.log('strike: ', strike)
                     } else {
@@ -157,8 +157,13 @@ const onStartButtonUser02 = () => {
                         $ball.textContent = ball;
                         console.log('ball: ', ball)
                     }
+                    $out.textContent = '';
                 }
             }
+        }
+        // 일차하는 ball이 없을 때, out이라고 알린다
+        if (strike === 0 && ball === 0) {
+            $out.textContent = 'OUT 입니다.'
         }
         // 숫자 힌트는 매 판 마다 리셋
         if (strike === 0) $strike.textContent = '0';
